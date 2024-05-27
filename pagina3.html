@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina 3</title>
+    <link rel="stylesheet" href="sass/estilo.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></lsi>
+            <li><a href="pagina2.html">Página 2</a></li>
+            <li><a href="pagina3.html">Página 3</a></li>
+        </ul>
+    </nav>
+    <div class="titulos">
+        <h1>para el siguiente ejemplo lo hicimos de la sigueinte manera</h1><br>
+        <h2>utilizando @for, @each y @while</h2>
+        $colors: (<br>
+  red,<br>
+  blue,<br>
+  green,<br>
+  yellow,<br>
+  orange,<br>
+  purple,<br>
+  pink,<br>
+  brown,<br>
+  grey,<br>
+  black<br>
+);<br>
+<br>
+$iterations: 10;<br>
+<br>
+
+%box-base {<br>
+  padding: 20px;<br>
+  border-radius: 5px;<br>
+  text-align: center;<br>
+  margin: 10px auto;<br>
+  width: 80%;<br>
+  font-size: 20px;<br>
+  color: white;<br>
+  transition: background-color 0.3s, color 0.3s;<br>
+}<br>
+<br>
+
+@for $i from 1 through $iterations {<br>
+  .box-#{$i} {<br>
+    @extend %box-base;<br>
+    font-size: 16px + $i * 2;<br>
+  }<br>
+}<br>
+<br>
+@each $color in $colors {<br>
+  .box-#{$color} {<br>
+    background-color: $color;<br>
+  }<br>
+}<br>
+<br>
+$i: 1;<br>
+@while $i <= length($colors) {<br>
+  .box-#{$i} {<br>
+    background-color: nth($colors, $i);<br>
+  }<br>
+  $i: $i + 1;<br>
+}<br>
+<br>
+<h1>aca el resultado
+    
+</h1>
+    </div>
+    <div class="container">
+        <div class="box box-1">Box 1</div>
+        <div class="box box-2">Box 2</div>
+        <div class="box box-3">Box 3</div>
+        <div class="box box-4">Box 4</div>
+        <div class="box box-5">Box 5</div>
+        <div class="box box-6">Box 6</div>
+        <div class="box box-7">Box 7</div>
+        <div class="box box-8">Box 8</div>
+        <div class="box box-9">Box 9</div>
+        <div class="box box-10">Box 10</div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina 2</title>
+    <link rel="stylesheet" href="sass/estilo.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></lsi>
+            <li><a href="pagina2.html">Página 2</a></li>
+            <li><a href="pagina3.html">Página 3</a></li>
+        </ul>
+    </nav>
+    <div class="titulos">
+    <h1>ejemplos SASS</h1>
+    <h2>utizando (@if, @else if, @else) y es una custom box <br>
+    para lo grar ese estilo podemos usar los siguientes estilos <br>
+    $theme: 'dark'; // Prueba con 'light', 'dark', 'colorful', etc. cambiando solo una palabra</h2>
+    </div>
+    <br>
+    <div class="container">
+        <div class="custom-box">
+            <h1>para usar esto utilizacmos lo siguiente </h1>
+            @mixin box-theme($theme) <br> {
+            @if $theme == 'light' { <br>
+              background-color: #f8f9fa;<br>
+              color: #000;
+          <br>
+              &:hover {<br>
+                background-color: #e2e6ea;<br><br>
+              }
+            } @else if $theme == 'dark' {<br>
+              background-color: #343a40;<br>
+              color: #fff;<br>
+          <br>
+              &:hover {<br>
+                background-color: #23272b;<br>
+              }
+            } @else if $theme == 'colorful' {<br>
+              background-color: #ff6347;<br>
+              color: #fff;<br>
+          <br>
+              &:hover {<br>
+                background-color: #e5533a;<br>
+              }<br>
+            } @else {<br>
+              background-color: #dcdcdc;<br>
+              color: #000;<br>
+          <br>
+              &:hover {<br>
+                background-color: #c0c0c0;<br>
+              }
+            }</div>
+      </div>
+</body>
+</html>

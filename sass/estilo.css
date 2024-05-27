@@ -1,0 +1,269 @@
+.titulos {
+  background-color: #5a6268;
+}
+
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #0e9615;
+}
+
+h2 {
+  color: yellow;
+}
+
+.container {
+  background: #2ecc71;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #0e9615;
+}
+nav ul li a:hover {
+  color: #2ecc71;
+}
+
+.button121 {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.button121:hover {
+  background-color: #0056b3;
+}
+
+.button1, .button2 {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button2 {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+.button2:hover {
+  background-color: #0056b3;
+}
+
+.button1 {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+}
+.button1:hover {
+  background-color: #5a6268;
+}
+
+.button-secondary, .button {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button {
+  background-color: #007bff;
+}
+.button:hover {
+  background-color: #0056b3;
+}
+
+.button-secondary {
+  background-color: #6c757d;
+}
+.button-secondary:hover {
+  background-color: #5a6268;
+}
+
+.button12 {
+  width: 40px;
+  height: 15px;
+}
+
+.box-10, .box-9, .box-8, .box-7, .box-6, .box-5, .box-4, .box-3, .box-2, .box-1, .custom-box {
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 20px auto;
+  width: 80%;
+  font-size: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.custom-box {
+  background-color: #f8f9fa;
+  color: #000;
+}
+.custom-box:hover {
+  background-color: #e2e6ea;
+}
+
+.box-10, .box-9, .box-8, .box-7, .box-6, .box-5, .box-4, .box-3, .box-2, .box-1, .custom-box {
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 10px auto;
+  width: 80%;
+  font-size: 20px;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.box-1 {
+  font-size: 18px;
+}
+
+.box-2 {
+  font-size: 20px;
+}
+
+.box-3 {
+  font-size: 22px;
+}
+
+.box-4 {
+  font-size: 24px;
+}
+
+.box-5 {
+  font-size: 26px;
+}
+
+.box-6 {
+  font-size: 28px;
+}
+
+.box-7 {
+  font-size: 30px;
+}
+
+.box-8 {
+  font-size: 32px;
+}
+
+.box-9 {
+  font-size: 34px;
+}
+
+.box-10 {
+  font-size: 36px;
+}
+
+.box-red {
+  background-color: red;
+}
+
+.box-blue {
+  background-color: blue;
+}
+
+.box-green {
+  background-color: green;
+}
+
+.box-yellow {
+  background-color: yellow;
+}
+
+.box-orange {
+  background-color: orange;
+}
+
+.box-purple {
+  background-color: purple;
+}
+
+.box-pink {
+  background-color: pink;
+}
+
+.box-brown {
+  background-color: brown;
+}
+
+.box-grey {
+  background-color: grey;
+}
+
+.box-black {
+  background-color: black;
+}
+
+.box-1 {
+  background-color: red;
+}
+
+.box-2 {
+  background-color: blue;
+}
+
+.box-3 {
+  background-color: green;
+}
+
+.box-4 {
+  background-color: yellow;
+}
+
+.box-5 {
+  background-color: orange;
+}
+
+.box-6 {
+  background-color: purple;
+}
+
+.box-7 {
+  background-color: pink;
+}
+
+.box-8 {
+  background-color: brown;
+}
+
+.box-9 {
+  background-color: grey;
+}
+
+.box-10 {
+  background-color: black;
+}
+
+/*# sourceMappingURL=estilo.css.map */

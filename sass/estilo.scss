@@ -1,0 +1,283 @@
+// Variables
+$primary-color: #0e9615;
+$secondary-color: #2ecc71;
+$font-stack: Helvetica, sans-serif;
+//titulos
+.titulos{
+  background-color: #5a6268;
+}
+
+// Mixin
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+// Uso de variables y mixin
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+h2{
+  color: yellow;
+}
+
+.container {
+  background: $secondary-color;
+  @include border-radius(5px);
+  padding: 20px;
+  margin: 10px;
+}
+
+// Anidación
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
+
+      a {
+        text-decoration: none;
+        color: $primary-color;
+
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}
+
+// Mixin para el botón primario
+@mixin button-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+
+// Definición de clase que incluye el mixin
+.button121 {
+  @include button-primary;
+}
+////
+
+%base-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+// Estilo específico para el botón primario
+.button2 {
+  @extend %base-button;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+// Estilo específico para el botón secundario
+.button1 {
+  @extend %base-button;
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+
+  &:hover {
+    background-color: #5a6268;
+  }
+}
+
+
+
+//////
+/// 
+%button-base {
+  background-color: #6c757d; // Color diferente para distinción
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+// Mixin para el botón primario con hover
+@mixin button-primary {
+  @extend %button-base;
+  background-color: #007bff;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+// Mixin para el botón secundario que extiende el placeholder
+@mixin button-secondary {
+  @extend %button-base;
+  background-color: #6c757d;
+
+  &:hover {
+    background-color: #5a6268;
+  }
+}
+
+// Aplicar mixins a las clases de los botones
+.button {
+  @include button-primary;
+}
+
+.button-secondary {
+  @include button-secondary;
+}
+
+// Definir funciones para calcular tamaños de botones (opcional)
+@function calculate-button-width($size) {
+  @return $size * 20px; // Ejemplo de cálculo
+}
+
+@function calculate-button-height($size) {
+  @return $size * 10px; // Ejemplo de cálculo
+}
+
+// Aplicar resultados de funciones a estilos de botones (opcional)
+.button12 {
+  width: calculate-button-width(2); // Ejemplo de uso
+  height: calculate-button-height(1.5); // Ejemplo de uso
+}
+//////
+// PAGINA 2
+$theme: 'light';
+
+// Placeholder para estilos base del cuadro
+%box-base {
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 20px auto;
+  width: 80%;
+  font-size: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+// Mixin para estilos del cuadro basado en el tema
+@mixin box-theme($theme) {
+  @if $theme == 'light' {
+    background-color: #f8f9fa;
+    color: #000;
+
+    &:hover {
+      background-color: #e2e6ea;
+    }
+  } @else if $theme == 'dark' {
+    background-color: #343a40;
+    color: #fff;
+
+    &:hover {
+      background-color: #23272b;
+    }
+  } @else if $theme == 'colorful' {
+    background-color: #ff6347;
+    color: #fff;
+
+    &:hover {
+      background-color: #e5533a;
+    }
+  } @else {
+    background-color: #dcdcdc;
+    color: #000;
+
+    &:hover {
+      background-color: #c0c0c0;
+    }
+  }
+}
+
+// Aplicar mixin al cuadro de texto con el tema definido
+.custom-box {
+  @extend %box-base;
+  @include box-theme($theme);
+}
+
+////PAGINA 3
+/// 
+/// 
+
+$colors: (
+  red,
+  blue,
+  green,
+  yellow,
+  orange,
+  purple,
+  pink,
+  brown,
+  grey,
+  black
+);
+
+$iterations: 10;
+
+
+%box-base {
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 10px auto;
+  width: 80%;
+  font-size: 20px;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+@for $i from 1 through $iterations {
+  .box-#{$i} {
+    @extend %box-base;
+    font-size: 16px + $i * 2;
+  }
+}
+
+@each $color in $colors {
+  .box-#{$color} {
+    background-color: $color;
+  }
+}
+
+$i: 1;
+@while $i <= length($colors) {
+  .box-#{$i} {
+    background-color: nth($colors, $i);
+  }
+  $i: $i + 1;
+}
